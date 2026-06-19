@@ -1,7 +1,7 @@
 'use client';
 
 import { use } from 'react';
-import { BlogPost } from '../blog/types';
+import { BlogPost } from '../types';
 
 export type PostsProps = {
 	posts: Promise<BlogPost[]>;

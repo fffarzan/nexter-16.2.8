@@ -1,5 +1,5 @@
 import { Suspense } from 'react';
-import Posts from '../ui/posts';
+import Posts from './components/posts';
 import { BlogPost } from './types';
 
 export default async function Page() {
@@ -18,7 +18,8 @@ export default async function Page() {
 					<li key={post.id}>{post.title}</li>
 				))}
 			</ul>
-			<Suspense fallback={<div>Loading...</div>}>
+			{/* stream */}
+			<Suspense fallback={<div>Suspense Loading...</div>}>
 				<Posts posts={serverData} />
 			</Suspense>
 		</>
