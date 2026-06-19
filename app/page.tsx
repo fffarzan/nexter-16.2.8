@@ -1,8 +1,8 @@
-import { PostsList } from './components/post-list';
+import { PostsList } from './common/components/post-list';
 
 export default function Home() {
 	return (
-		<div className="min-h-screen bg-zinc-50 dark:bg-black font-sans">
+		<div className="min-h-screen bg-zinc-50 dark:bg-black">
 			<main className="container mx-auto px-4 py-8 max-w-7xl">
 				<div className="mb-8">
 					<h1 className="text-4xl font-bold mb-4 text-black dark:text-zinc-50">

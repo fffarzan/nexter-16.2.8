@@ -1,21 +1,22 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { QueryProvider } from './providers/query-provider';
+import { QueryProvider } from './common/providers/query-provider';
 
 export const metadata: Metadata = {
 	title: 'Nexter',
 	description: 'Next Hecker',
 };
 
-export default function RootLayout({
-	children,
-}: Readonly<{
+type RootLayoutPorps = Readonly<{
 	children: React.ReactNode;
-}>) {
+}>;
+
+// Root layout is required and must contain `html` and `body` tags.
+export default function RootLayout({ children }: RootLayoutPorps) {
 	return (
-		<html lang="en" className="h-full antialiased">
+		<html lang="en">
 			<QueryProvider>
-				<body className="min-h-full flex flex-col">{children}</body>
+				<body>{children}</body>
 			</QueryProvider>
 		</html>
 	);
