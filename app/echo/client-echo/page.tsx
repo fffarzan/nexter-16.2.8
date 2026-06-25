@@ -1,4 +1,5 @@
 import { use } from 'react';
+import styles from './client-echo.module.css';
 
 type PageParams = {
 	params: Promise<{ slug: string }>;
@@ -12,7 +13,7 @@ export default function Page({ params, searchParams }: PageParams) {
 	console.log('slug', slug);
 
 	return (
-		<h1>
+		<h1 className={styles.title}>
 			What you said slug: &quot;{slug}&quot; filters query params: &quot;{filters}&quot;
 		</h1>
 	);

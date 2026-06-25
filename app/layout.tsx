@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
-import './globals.css';
+import './globals.css'; // root of the project
 import { QueryProvider } from './common/providers/query-provider';
 import { Geist } from 'next/font/google';
 import localFont from 'next/font/local';
+
+// import 'bootstrap/dist/css/bootstrap.css' // external css library
 
 // google font
 const geist = Geist({
